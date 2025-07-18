@@ -64,10 +64,19 @@ jobs:
       with:
         path: artifacts
     
+    - name: Prepare release assets
+      run: |
+        mkdir -p release-assets
+        cp artifacts/tts-cli-linux-x86_64/tts-cli release-assets/tts-cli-linux-x86_64
+        cp artifacts/tts-cli-macos-x86_64/tts-cli release-assets/tts-cli-macos-x86_64
+        cp artifacts/tts-cli-macos-aarch64/tts-cli release-assets/tts-cli-macos-aarch64
+        cp artifacts/tts-cli-windows-x86_64.exe/tts-cli.exe release-assets/tts-cli-windows-x86_64.exe
+        chmod +x release-assets/tts-cli-*
+    
     - name: Create release
       uses: softprops/action-gh-release@v1
       with:
-        files: artifacts/**/tts-cli*
+        files: release-assets/*
         generate_release_notes: true
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
