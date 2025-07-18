@@ -9,6 +9,7 @@ mod config;
 #[derive(Parser)]
 #[command(name = "tts-cli")]
 #[command(about = "A command-line text-to-speech tool with multiple providers and caching")]
+#[command(version)]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
