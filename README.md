@@ -12,21 +12,30 @@ A command-line text-to-speech tool with multiple providers and intelligent cachi
 
 ## Installation
 
-### From Source
+### Option 1: Download Pre-built Binary (Recommended)
+
+1. Go to the [Releases page](https://github.com/eyalev/tts-cli/releases)
+2. Download the binary for your platform:
+   - **Linux x86_64**: `tts-cli-linux-x86_64`
+   - **Linux ARM64**: `tts-cli-linux-aarch64`
+   - **macOS Intel**: `tts-cli-macos-x86_64`
+   - **macOS Apple Silicon**: `tts-cli-macos-aarch64`
+   - **Windows**: `tts-cli-windows-x86_64.exe`
+3. Make it executable (Linux/macOS): `chmod +x tts-cli-*`
+4. Move to your PATH: `mv tts-cli-* ~/.local/bin/tts-cli`
+
+### Option 2: Install with Cargo (Rust users)
 
 ```bash
-git clone <repository-url>
-cd tts-cli
-cargo build --release
+cargo install --git https://github.com/eyalev/tts-cli
 ```
 
-The binary will be available at `target/release/tts-cli`.
-
-### Install to ~/.local/bin
+### Option 3: Build from Source
 
 ```bash
-cargo install --path .
-# or
+git clone https://github.com/eyalev/tts-cli.git
+cd tts-cli
+cargo build --release
 cp target/release/tts-cli ~/.local/bin/
 ```
 
