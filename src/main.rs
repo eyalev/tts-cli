@@ -10,7 +10,12 @@ mod config;
 #[command(name = "tts-cli")]
 #[command(about = "A command-line text-to-speech tool with multiple providers and caching")]
 #[command(version)]
+#[command(disable_version_flag = true)]
 struct Cli {
+    /// Print version information
+    #[arg(short = 'v', long = "version", action = clap::ArgAction::Version)]
+    version: Option<bool>,
+    
     #[command(subcommand)]
     command: Commands,
 }
