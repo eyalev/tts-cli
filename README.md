@@ -17,7 +17,6 @@ A command-line text-to-speech tool with multiple providers and intelligent cachi
 1. Go to the [Releases page](https://github.com/eyalev/tts-cli/releases)
 2. Download the binary for your platform:
    - **Linux x86_64**: `tts-cli-linux-x86_64`
-   - **Linux ARM64**: `tts-cli-linux-aarch64`
    - **macOS Intel**: `tts-cli-macos-x86_64`
    - **macOS Apple Silicon**: `tts-cli-macos-aarch64`
    - **Windows**: `tts-cli-windows-x86_64.exe`
