@@ -1,0 +1,21 @@
+[package]
+name = "tts-cli"
+version = "0.1.0"
+edition = "2021"
+authors = ["Your Name <your.email@example.com>"]
+description = "A command-line text-to-speech tool with multiple providers and caching"
+license = "MIT OR Apache-2.0"
+
+[dependencies]
+clap = { version = "4.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+sha2 = "0.10"
+hex = "0.4"
+dirs = "5.0"
+anyhow = "1.0"
+reqwest = { version = "0.11", features = ["json", "rustls-tls"], default-features = false }
+base64 = "0.21"
+rodio = "0.17"
+hound = "3.5"
